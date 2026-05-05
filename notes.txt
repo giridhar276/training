@@ -1,0 +1,179 @@
+
+
+
+
+
+
+
+#####################################################################
+What is memory profiling?
+
+Memory profiling means checking how much memory your Python program is using.
+
+Useful when:
+
+1. Program becomes slow
+2. Program crashes with memory error
+3. Large files/data are processed
+4. You want to compare two approaches
+5. You want to find memory leaks
+
+Python has useful built-in modules:
+
+sys          → checks size of individual objects
+tracemalloc  → tracks memory allocation line by line
+
+
+sys.getsizeof() checks memory size of an object.
+
+tracemalloc tracks memory used by the program while it is running.
+
+Current memory means memory used right now.
+
+Peak memory means maximum memory used at any point during execution.
+
+Generators save memory because they do not store all values at once.
+
+
+
+#####################################
+
+name = "Python"
+print("String memory:", sys.getsizeof(name), "bytes")
+
+
+But Python does not store only 6 bytes.
+
+It also stores internal details like:
+
+object type
+length of string
+hash value
+encoding information
+actual characters
+
+So:
+
+"Python" = Python object overhead + 6 characters
+         ≈ 49 bytes + 6 bytes
+         = 55 bytes
+
+
+############################################
+
+List memory: 120 bytes
+numbers = [10, 20, 30, 40, 50]
+
+A list stores references to objects, not the actual integers directly.
+
+So list memory includes:
+
+list object overhead
+space for 5 references
+
+It does not fully include memory of 10, 20, 30, etc.
+
+So:
+
+List container + references = 120 bytes
+
+####################################################
+
+
+Dictionary memory: 232 bytes
+student = {"name": "Ravi", "age": 25}
+
+Dictionary needs more memory because it stores data as key-value pairs.
+
+It maintains an internal hash table for fast searching.
+
+Memory includes:
+
+dictionary object overhead
+hash table space
+references to keys
+references to values
+empty slots for future growth
+
+So dictionary memory is higher:
+
+Dictionary container = 232 bytes
+
+It does not fully include memory of "name", "Ravi", "age", and 25.
+
+##########################
+
+
+String      → stores characters + object details
+List        → stores references + extra space because it is mutable
+Dictionary  → stores hash table, keys, values, and references
+Tuple       → stores references but is immutable, so smaller than list
+
+
+
+#############################
+# file handling 
+##############################
+
+Buffered I/O means reading/writing data in small parts.
+For large files:- Avoid file.read() for huge files- Avoid file.readlines() for huge files- Prefer line-by-line reading- 
+Prefer chunk-based reading- Use binary mode for large media/backup files- Use csv.DictReader for large CSV files
+
+
+#############################
+Pickle File Handling
+##############################
+Pickle is used to save Python objects in binary format.
+
+It can store:
+
+List
+Dictionary
+Tuple
+Class objects
+Machine learning models
+Processed data
+
+Important:
+
+Pickle is Python-specific.
+Do not load pickle files from unknown sources.
+It can be unsafe.
+
+
+
+
+Real-Time Use Cases
+CSV
+1. Export employee salary report
+2. Read bank transaction data
+3. Process sales data
+4. Load datasets for Pandas/ML
+5. Generate training attendance reports
+JSON
+1. Store API response
+2. Send data from frontend to backend
+3. Save LLM response in structured format
+4. Store application settings
+5. Exchange data between microservices
+Pickle
+1. Save trained ML model
+2. Save preprocessed dataset
+3. Cache expensive calculation result
+4. Store Python object temporarily
+5. Save vectorizer/tokenizer in ML/NLP projects
+YAML
+1. Store database configuration
+2. Kubernetes deployment files
+3. Docker compose files
+4. ML experiment configuration
+5. Application environment settings
+
+
+CSV is best for rows and columns.
+
+JSON is best for API-style structured data.
+
+Pickle is best for saving Python objects, but it is not safe for unknown files.
+
+YAML is best for clean and readable configuration files.

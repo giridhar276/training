@@ -1,0 +1,6 @@
+Employee Monthly Report
+-----------------------
+Total Employees: 5
+Departments Covered: IT, HR, Finance, Data Science, DevOps
+Highest Salary Department: Data Science
+Report Generated For: Training Demo

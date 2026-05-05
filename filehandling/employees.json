@@ -1,0 +1,30 @@
+[
+    {
+        "employee_id": 101,
+        "name": "Ravi Kumar",
+        "department": "IT",
+        "salary": 65000,
+        "city": "Hyderabad"
+    },
+    {
+        "employee_id": 102,
+        "name": "Sita Sharma",
+        "department": "HR",
+        "salary": 52000,
+        "city": "Bengaluru"
+    },
+    {
+        "employee_id": 103,
+        "name": "Kiran Reddy",
+        "department": "Finance",
+        "salary": 72000,
+        "city": "Chennai"
+    },
+    {
+        "employee_id": 104,
+        "name": "Anita Rao",
+        "department": "Data Science",
+        "salary": 85000,
+        "city": "Pune"
+    }
+]

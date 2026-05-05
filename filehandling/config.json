@@ -1,0 +1,11 @@
+{
+    "app_name": "Training File Handling App",
+    "version": 1.0,
+    "environment": "development",
+    "debug": true,
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "name": "training_db"
+    }
+}

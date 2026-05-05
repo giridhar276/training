@@ -1,0 +1,7 @@
+2026-05-05 09:00:01 INFO Application started
+2026-05-05 09:00:05 INFO User login successful: Ravi
+2026-05-05 09:01:12 WARNING Disk usage above 80%
+2026-05-05 09:02:30 ERROR Database connection failed
+2026-05-05 09:03:10 INFO Retrying database connection
+2026-05-05 09:03:20 ERROR API timeout while fetching employee data
+2026-05-05 09:04:00 INFO Application stopped
