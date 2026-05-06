@@ -1,17 +1,28 @@
+import os
 import csv
 import pymysql
+from dotenv import load_dotenv
 
-# Step 1: Connect to employee_db database
+# Load values from .env file
+load_dotenv()
+
+MYSQL_HOST = os.getenv("MYSQL_HOST")
+MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
+MYSQL_USER = os.getenv("MYSQL_USER")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE")
+
+# Connect to MySQL database
 connection = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="your_mysql_password",
-    database="employee_db"
+    host=MYSQL_HOST,
+    port=MYSQL_PORT,
+    user=MYSQL_USER,
+    password=MYSQL_PASSWORD,
+    database=MYSQL_DATABASE
 )
 
 cursor = connection.cursor()
 
-# Step 2: Prepare insert query
 insert_query = """
 INSERT INTO emp_info (
     age,
@@ -35,7 +46,7 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 
 records = []
 
-# Step 3: Read records from empinfo.csv
+# Read records from empinfo.csv
 with open("empinfo.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.DictReader(file)
 
@@ -60,14 +71,11 @@ with open("empinfo.csv", "r", newline="", encoding="utf-8") as file:
 
         records.append(record)
 
-# Step 4: Insert all records into MySQL
+# Insert all records into MySQL
 cursor.executemany(insert_query, records)
-
-# Step 5: Commit changes
 connection.commit()
 
 print(cursor.rowcount, "records inserted successfully.")
 
-# Step 6: Close resources
 cursor.close()
 connection.close()

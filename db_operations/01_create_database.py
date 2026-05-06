@@ -1,19 +1,30 @@
+import os
 import pymysql
+from dotenv import load_dotenv
 
-# Step 1: Connect to MySQL server
+# Load values from .env file
+load_dotenv()
+
+MYSQL_HOST = os.getenv("MYSQL_HOST")
+MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
+MYSQL_USER = os.getenv("MYSQL_USER")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE")
+
+# Connect to MySQL server without database
 connection = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="your_mysql_password"
+    host=MYSQL_HOST,
+    port=MYSQL_PORT,
+    user=MYSQL_USER,
+    password=MYSQL_PASSWORD
 )
 
 cursor = connection.cursor()
 
-# Step 2: Create database
-cursor.execute("CREATE DATABASE IF NOT EXISTS employee_db")
+# Create database
+cursor.execute(f"CREATE DATABASE IF NOT EXISTS {MYSQL_DATABASE}")
 
-print("Database created successfully.")
+print(f"Database '{MYSQL_DATABASE}' created successfully.")
 
-# Step 3: Close resources
 cursor.close()
 connection.close()

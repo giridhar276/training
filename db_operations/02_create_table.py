@@ -1,16 +1,28 @@
+import os
 import pymysql
+from dotenv import load_dotenv
 
-# Step 1: Connect to employee_db database
+# Load values from .env file
+load_dotenv()
+
+MYSQL_HOST = os.getenv("MYSQL_HOST")
+MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
+MYSQL_USER = os.getenv("MYSQL_USER")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
+MYSQL_DATABASE = os.getenv("MYSQL_DATABASE")
+
+# Connect to MySQL database
 connection = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="your_mysql_password",
-    database="employee_db"
+    host=MYSQL_HOST,
+    port=MYSQL_PORT,
+    user=MYSQL_USER,
+    password=MYSQL_PASSWORD,
+    database=MYSQL_DATABASE
 )
 
 cursor = connection.cursor()
 
-# Step 2: Create table based on empinfo.csv structure
+# Create table based on empinfo.csv structure
 create_table_query = """
 CREATE TABLE IF NOT EXISTS emp_info (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,8 +46,7 @@ CREATE TABLE IF NOT EXISTS emp_info (
 
 cursor.execute(create_table_query)
 
-print("Table emp_info created successfully.")
+print("Table 'emp_info' created successfully.")
 
-# Step 3: Close resources
 cursor.close()
 connection.close()
