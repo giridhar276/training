@@ -116,3 +116,31 @@ db.delete_employee(2)
 db.display_employees()
 
 db.close_connection()
+
+
+
+'''
+Without inheritance, you may write database connection code again and again:
+
+EmployeeDB has connection code
+DepartmentDB has connection code
+ProductDB has connection code
+CustomerDB has connection code
+
+With inheritance:
+
+MySQLDatabase has connection code once
+EmployeeDB reuses it
+DepartmentDB reuses it
+ProductDB reuses it
+CustomerDB reuses it
+
+So inheritance helps in:
+
+Code reusability
+Cleaner structure
+Less duplicate code
+Easy maintenance
+Real-time project organization
+
+'''
