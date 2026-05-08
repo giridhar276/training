@@ -1,0 +1,465 @@
+
+C - datatypes 
+----------------
+int 
+float
+char
+double 
+
+
+** Everything in Python is object ** 
+** Every object contains methods **
+
+
+python objects 
+--------
+
+number 
+-------
+number can be integer or decimal or octal.
+
+aval = 10
+bval = 34.43
+
+string 
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python'
+bname = "java programming"
+cname = """unix shell scripting"""
+
+
+list  ( array in C)
+------
+list contains set of elements.
+elements can be numbers or strings or any combination.
+
+alist = [10,20,30,40]
+blist = [{"name":"ram","age":10},{"name":"rita","age":40}]
+
+
+
+tuple  ( immutable or unchangeable or uneditable )
+-------
+tuple contains set of elements.
+tuple is defined in ().
+*** Elements inside tuple cannot be modified directly ***
+
+atup = (10,20,30,40)
+
+
+
+dictionary  ( hash    associtiativearray  hashmap  map   hashaale  dict  json  mutablemap  )
+------------
+dictionary contains elements in the form of keys and values .
+
+syntax:   object = { key:value , key:value , key:value }
+example:   book  =  { "chap1":10 , "chap2":20  , "chap3":30}
+
+
+index 
+---------
+chap1   10
+chap2   20
+chap3   30
+chap4   40
+
+
+
+
+
+set ( venn diagrams in schooling)
+----
+set is UNORDERED collection of UNIQUE elements of same type .
+
+
+aset = {10,10,10,20,30,30,30}
+
+
+
+
+conditional statements 
+--------------------------
+if 
+if-else 
+if-elif-elif-elif-elif-else 
+
+control statements 
+--------------------
+for loop
+while loop
+
+
+
+
+builtin functions 
+=========================
+print()
+range()
+input()
+max()
+min()
+sum()
+id()
+isinstance()
+type()
+help()
+dir()
+
+typecasting functions 
+------------------------
+int()
+float()
+list()
+str()
+tuple()
+dict()
+set()
+
+
+How to display all the list of builtin functions ?
+-------------------------
+online document
+offline help
+
+
+
+There are 2 types of functions 
+------------------------------
+
+- builtin functions 
+- user defined functions 
+
+
+function | submodule | coroutine | block | definition
+
+user defined functions 
+----------------------------
+- code resuability 
+- we define the block once and call it for multiple times 
+- better code organization 
+- avoiding repetitions 
+- improves readability 
+- easy debugging 
+
+
+
+
+def display(a,b):
+    print(a,b)
+dislay(10,20)
+
+
+
+passing arguments 
+-------------------
+fixed arguments 
+default arguments ( function overloading)
+keyword arguments 
+variable length arguments 
+
+
+
+example:
+write a aprogram to connect to database and insert all the records from the file to datbase.
+
+
+
+method1:
+------------
+without using any functions 
+
+
+method2: ( we are going to break down the requirement into blocks)
+-------------------
+
+def read_file():
+    ###
+def connect_db():
+    ###
+def validate():
+    ####
+def insert_db():
+    ###
+def close_connections():
+    ###
+
+
+
+
+We are NOT supposed to install any packages in base python(global or default)
+
+
+differnt tools for  creating virtual environement
+-------------------------
+venv  ( default with python and most generaly used)
+virtulenv 
+conda 
+uv 
+poetry
+
+
+steps for creating virtual environements ( using venv library)
+-------------------------------------------
+
+step1: create virtual environement
+python -m venv myenv1
+
+step2: activate your virtual environement
+windows : .\myenv1\Scripts\activate
+linux   : source .\myenv1\bin\activate
+
+step3: you can start working 
+
+step4: deactivate your environement
+deactivate 
+
+
+########################
+# decorators in python
+#########################
+decorators in python are functions that modify or enhance another function
+without changing its original code .
+
+
+
+file handling 
+---------------------
+
+txt 
+csv 
+pdf 
+json
+xlsx 
+docx 
+log 
+conf 
+mp3 
+mp4
+dat 
+jpg
+mpeg
+gif
+tar
+tar.gz
+.zip
+.rar
+.7z 
+pptx
+
+
+
+working with flat files :  log csv conf txt json yaml html
+- we dont need any third party library for read/write 
+
+
+working with third party files :  xlsx pptx pdf mp4 mp3 tar zip aws gcp
+- we need third party library to open the file
+
+headerfiles in C 
+-----------------------
+#include<stdio.h>
+#include<conio.h>
+#include<math.h> 
+#include<time.h>
+#include<datetime.h>
+#include<string.h>
+#include<graphics.h>
+#include<stdmanip.h>
+
+library or packages in python 
+-----------------------------
+There are 2 types of libraries :
+
+- builtin libraries :
+-----------------------
+All the builtin libraries are installed with python .
+path : C:\Python312\Lib
+
+- third party libraries 
+-------------------------
+Depending on the requirement, we are supposed to install the third party library
+ from www.pypi.org using pip tool
+
+path : C:\Python312\Lib\site-packages
+
+
+all the third party libraries are avaiable in www.pypi.org.
+
+We need to download and install the library from www.pypi.org either downloading 
+manually or using pip tool.
+
+
+
+requirement/task =  core programming    +  libraries  + domain expertise
+                    ( procedural or oop)
+
+
+
+requirement         library
+-------------------------------
+work with aws       boto3
+excel files         openpyxl 
+data analytics      pandas
+visualizations      matplotlib
+web automation      selenium
+ML sols             sklearn 
+GenAI               langchain 
+
+
+
+working with flat files  ( log conf txt csv json yaml  html )
+-----------------------
+read operation ( r)
+write operation ( w )
+append operation ( a)
+
+opening the file 
+-------------------
+syntax:     obj = open(filename,mode)
+example:    fobj =open("customers.txt","r") # read mode 
+            fobj =open("customers.txt","w") # write mode 
+            fobj =open("customers.txt","a") # append mode 
+
+closing the file 
+-----------------
+fobj.close()
+
+
+reading the file 
+------------------
+- reading line by line 
+- fobj.readlines()
+- fobj.read()
+- using csv library 
+- using pandas library 
+
+writing to the file 
+------------------------
+- fobj.writelines()
+- fobj.write()
+- using csv library 
+- using pandaslibrary
+
+
+exception handling-
+---------------------
+There are 2 types of errors.
+
+syntax error 
+
+semantic error or runtime error or logical error
+-------------------
+handling errors that occurs during runtime is known as exception handling .
+
+try
+except 
+else
+finally 
+raise 
+
+
+####################
+
+1. procedural programming 
+
+2. object oriented programming
+
+
+################################
+oop features : global principles for all the languages  : code resusability
+------------ 
+
+class 
+------
+class is like a blueprint of the house
+Every class contains attributes and methods 
+
+
+object 
+--------
+object is the instance of the class.
+
+self 
+-----
+self is the instance of the object.
+
+inheritance 
+
+polymorphism
+- function overloading
+- operator overloading 
+
+
+
+
+
+rest apis 
+----------
+consuming rest apis
+
+creating rest apis
+-----------------
+fastapi 
+flask 
+django
+
+
+
+data cleaning
+data preprocessing
+data cleansing 
+data mining
+data processing 
+ETL processing 
+
+
+
+
+hello.py
+
+hello.ipynb -> interactive python notebook
+
+
+without threading - sequential processing
+
+file1  1 min
+file2  1 min
+file3  1 min
+file4  1 min
+file5  1 min
+-------------
+        5 mins
+------------
+
+parallel processing
+
+file1  thread1 1 min
+file2 thread2 1 min
+file3 thread3 1 min
+file4 thread4 1 min
+file5 thread5  1 min
+-----------------------
+                1 min
+
+
+you are downloading a file
+
+
+normal way
+------------
+start download 
+wait until download completes 
+than make a tea 
+
+
+with async way
+----------
+start downloading
+while download is happening , make tea 
+come back when download is done
+
+
+
+import 
