@@ -26,6 +26,30 @@ driver = webdriver.Chrome(options=options)
 wait = WebDriverWait(driver, 15)
 
 try:
+    options = Options()
+    
+    # Disable Chrome password manager and breach warning popup
+    prefs = {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False,
+        "profile.password_manager_leak_detection": False,
+        "safebrowsing.enabled": False,
+        "safebrowsing.password_protection_enabled": False,
+    }
+    
+    options.add_experimental_option("prefs", prefs)
+    
+    # Optional Chrome cleanup options
+    options.add_argument("--disable-notifications")
+    options.add_argument("--disable-popup-blocking")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--no-first-run")
+    options.add_argument("--no-default-browser-check")
+    
+    driver = webdriver.Chrome(options=options)
+
+
+    
     driver.get("https://www.saucedemo.com/")
 
     # Login with standard demo credentials
