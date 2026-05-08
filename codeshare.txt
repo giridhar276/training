@@ -1,0 +1,664 @@
+
+
+Username: Admin
+Password: 15blacK#321#
+
+
+
+url: https://cloud.cdp.rpsconsulting.in/console/#/
+
+
+password:
+
+siLv3rfoX%35%
+
+
+
+username
+----------
+26PRE0014_U01 - Manish Singh
+26PRE0014_U02 - Ganesh Prasath A
+26PRE0014_U03 -Santhosh R
+26PRE0014_U04 - Soumen M
+26PRE0014_U05 - Vaishnavi A
+26PRE0014_U06 - Sathish V V
+26PRE0014_U07 - Selvi Duraisamy
+26PRE0014_U08 - Pritam Jena
+26PRE0014_U09 - ShriHari C
+26PRE0014_U10-- Naga Polana
+26PRE0014_U11 - Nivetha V
+26PRE0014_U12 - Aleena K B (A704693) 
+26PRE0014_U13 - Vignesh (A690113)
+26PRE0014_U14 - Balaganesan(A595918)
+26PRE0014_U15 - Gyanendra (A689602)
+26PRE0014_U16 - Karthik V (A668328)
+26PRE0014_U17 - Rohit Punamiya
+26PRE0014_U18 - Madhan A
+26PRE0014_U19 - Sharan K (A723397)
+26PRE0014_U20 - Jafar
+26PRE0014_U21 - Anil Sriram
+26PRE0014_U22 - Rabindra (A710296)
+26PRE0014_U23 - Uday
+26PRE0014_U25 - Suresh
+
+26PRE0014_U26  Rajeev
+26PRE0014_U27  Yeshwanth S (A746509)
+26PRE0014_U28  Subhashree
+26PRE0014_U29  Anusha 
+26PRE0014_U30 umashankar
+
+
+
+
+
+
+
+
+
+
+val = 10
+print(val)
+
+#string 
+aname = "python programming"
+print("language:", aname)
+print(aname.upper())
+print(aname.isupper())
+print(aname)
+aname = aname.upper()
+
+#list
+alist = [10,20,"java",["rita","gita"]]
+print(alist)
+alist.append(40)
+print(alist)
+alist.extend([50,60,70,70,80])
+print(alist)
+alist = [10,20,30]
+alist.append(40)
+print("After appending:",alist)
+alist.extend([50,60,70,90])
+print("After extending:",alist)
+
+
+#tuple
+atup = (10,20,30)
+print(atup.count(10))
+
+#dictionary
+book = {"chap1":10 ,"chap2":20 ,"chap3":30}
+print(book.keys())
+print(book.values())
+print(book.items())
+
+#set
+aset = {10,20,20,20,10,10,20,30,30}
+bset = {40,40,40,40,50,60}
+print(aset)
+print(aset.union(bset))
+print(aset.intersection(bset))
+
+
+
+
+
+
+
+
+##### condition ################
+
+name = "python programming"
+if "python" in name:
+    print("substring found")
+    print("inside if ")
+    print("still inside if ")
+else:
+    print("not found")
+    print("inside else")
+    print("still inside else")
+
+
+# if-elif-elif-elif-else
+lang = input("Enter any languages:")
+if "python" in lang:
+    print("its python")
+elif "java" in lang:
+    print("its java")
+elif "C" in lang:
+    print("its c")
+else:
+    print("its someother language")
+
+
+
+
+
+
+
+
+alist = [10,20,30]
+if 20 in alist:
+    print("True")
+else:
+    print("False")
+
+
+book = {"chap1":10 ,"chap2":20}
+if "chap1" in book.keys():
+    print("key found")
+else:
+    print("key is not found")
+
+if 10 in book.values():
+    print("value is found")
+else:
+    print("value found")
+
+
+
+
+
+
+
+
+
+# display numbers from 1 to 5
+for val in range(1,6):
+    print(val)
+# range(start,stop,step)
+for val in range(5,0,-1):
+    print(val)
+    
+# iterating string
+name = "python"
+for char in name:
+    print(char)
+
+# iterating list
+alist = [10,20,30]
+for val in alist:
+    print(val)
+
+# reading dictionary
+book = {"chap1":10 ,"chap2":20}
+for key in book:
+    print(key)
+
+for value in book.values():
+    print(value)
+
+# set operations
+aset = {10,10,10,10,20,20,30}
+for val in aset:
+    print(val)
+    
+    
+    
+    
+###################################################
+
+
+# fixed arguments
+def display(a,b):
+    print(a,b)
+display(10,20)
+
+# default arguments 
+def display(a = 0,b = 0,c =0):
+    print(a,b,c)
+display()
+display(10)
+display(10,20)
+display(10,20,30)
+
+
+# keyword arguments
+def display(b,a,c):
+    print(a,b,c)
+display(c=30,a=10,b=20)
+
+# varaible length arguments
+# in python, if any variable begins with * .... it is treated as tuple
+def display(*args):
+    #print(args)
+    for val in args:
+        print(val)
+display(10,20,30,40,50,45,2,56,32,67,2,6732,5,32,5,32,46,32,54,4332,6)
+
+def displayinfo(**kwargs):
+    print(kwargs)
+
+displayinfo(chap1 = 10 , chap2 = 20)
+
+
+#############################
+
+
+
+
+
+# fixed arguments
+def display(a,b):
+    print(a,b)
+display(10,20)
+
+# default arguments 
+def display(a = 0,b = 0,c =0):
+    print(a,b,c)
+display()
+display(10)
+display(10,20)
+display(10,20,30)
+
+
+# keyword arguments
+def display(b,a,c):
+    print(a,b,c)
+display(c=30,a=10,b=20)
+
+# varaible length arguments
+# in python, if any variable begins with * .... it is treated as tuple
+def display(*args):
+    #print(args)
+    for val in args:
+        print(val)
+display(10,20,30,40,50,45,2,56,32,67,2,6732,5,32,5,32,46,32,54,4332,6)
+
+def displayinfo(**kwargs):
+    print(kwargs)
+
+displayinfo(chap1 = 10 , chap2 = 20)
+
+
+#############################
+
+# traditionl way
+# fixed arguments
+def display(a,b):
+    c = a + b
+    return c
+output = display(10,20)
+print(output)
+
+
+# pythonic way
+# lambda function 
+# labmda is the replacement of single liner function
+# Advantage : lambda function is faster compared with the regular function
+# syntax: 
+#funtioname = lambda varaibles : expression
+
+display = lambda a,b : a + b
+output = display(10,20)
+
+print(output)
+
+
+
+
+
+
+# 2. Square of a number
+square = lambda x: x ** 2
+print(square(4))  # 16
+
+# 3. Length of a string
+length = lambda s: len(s)
+print(length("python"))  # 6
+
+
+# 4. Multiply three numbers
+mul = lambda a, b, c: a * b * c
+print(mul(2, 3, 4))  # 24
+
+
+# 5. Convert to uppercase
+upper = lambda s: s.upper()
+print(upper("hello"))  # HELLO
+
+
+# 6. Reverse string
+reverse = lambda s: s[::-1]
+print(reverse("lambda"))  # adbmal
+
+
+
+
+
+
+# 1. Max of two numbers
+maximum = lambda a, b: a if a > b else b
+print(maximum(10, 20))  # 20
+
+
+
+
+# 2. Pass or Fail
+result = lambda marks: "Pass" if marks >= 35 else "Fail"
+print(result(30))  # Fail
+
+
+
+
+# 3. Even or Odd
+even_odd = lambda x: "Even" if x % 2 == 0 else "Odd"
+print(even_odd(9))  # Odd
+
+
+
+# 4. Positive, Negative or Zero
+sign = lambda x: "Positive" if x > 0 else "Negative" if x < 0 else "Zero"
+print(sign(-5))  # Negative
+
+
+
+
+# 5. Grade categorization
+grade = lambda m: 'A' if m >= 90 else 'B' if m >= 75 else 'C'
+print(grade(80))  # B
+
+
+# 6. Adult or Minor
+age_check = lambda age: "Adult" if age >= 18 else "Minor"
+print(age_check(17))  # Minor
+
+# 7. Number is multiple of 3
+multiple_of_3 = lambda x: "Yes" if x % 3 == 0 else "No"
+print(multiple_of_3(9))  # Yes
+
+# 8. Leap year check
+leap_year = lambda y: "Leap" if (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0) else "Not Leap"
+print(leap_year(2020))  # Leap
+
+# 9. Compare lengths
+compare_len = lambda a, b: "Equal" if len(a) == len(b) else "Not Equal"
+print(compare_len("hi", "by"))  # Equal
+
+# 10. Password strength
+password_check = lambda pwd: "Strong" if len(pwd) >= 8 else "Weak"
+print(password_check("pass123"))  # Weak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+alist = [10,20,30,40,50]
+#output: [15,25,35,45,55]
+blist = []
+for val in alist:
+    blist.append( val + 5)
+print(blist)
+
+
+
+
+alist = [10,20,30,40,50]
+
+# map(function,iterable)
+increment = lambda x : x + 5
+print(list(map(increment, alist)))
+
+
+print(dir(__builtins__))
+
+
+#Convert to strings
+nums = [1, 2, 3, 4, 5]
+to_str = list(map(lambda x: str(x), nums))
+print(to_str)  # ['1', '2', '3', '4', '5']
+
+
+#Convert floats to ints
+floats = [2.5, 3.6, 4.1]
+ints = list(map(lambda x: int(x), floats))
+print(ints)  # [2, 3, 4]
+
+
+
+#Uppercase names
+names = ["alice", "bob", "carol"]
+upper_names = list(map(lambda x: x.upper(), names))
+print(upper_names)  # ['ALICE', 'BOB', 'CAROL']
+
+
+
+#Extract domain from email
+emails = ["user1@gmail.com", "user2@yahoo.com"]
+domains = list(map(lambda x: x.split("@")[1], emails))
+print(domains)
+
+
+names = ["Alice", "Bob"]
+greeted = list(map(lambda x: "Mr./Ms. " + x, names))
+print(greeted)
+
+
+
+
+
+
+#############################
+
+
+
+
+import os 
+path = "."
+py_files = []
+files = os.listdir(path)
+for file in files:
+    if file.endswith(".py"):
+        py_files.append(file)
+print(py_files)
+
+### using lambda with filter
+import os 
+path = "."
+files = os.listdir(path)
+py_files = list(filter(lambda f: f.endswith(".py"), files))
+print(py_files)
+
+
+
+#######################
+
+def my_decorator(func):
+    def wrapper():
+        print("before function execution")
+        func()
+        print("after function execution")
+    return wrapper
+
+
+@my_decorator
+def greet():
+    print("hello, welcome to world of programming")
+
+greet()
+    
+    
+    
+    
+##############################
+
+https://git-scm.com/install/windows
+
+
+#############################
+
+
+git clone https://github.com/giridhar276/training.git
+
+
+
+
+
+
+
+
+#method1:  reading the file line by line
+# fobj acts like cursor or hander for navigating
+with open("employees.csv","r") as fobj:
+    for line in fobj:
+        print(line.strip())
+
+# method2: using fobj.readlines() ---> list
+with open("employees.csv","r") as fobj:
+    print(fobj.readlines())
+    #lines = list(map(lambda x: x.strip(),fobj.readlines()))
+    #print(lines)
+
+# method3: using fobj.read() ----> string
+with open("employees.csv","r") as fobj:
+    print(fobj.read())
+
+# method4: using csv library  # this method is faster compared to other methods
+import csv
+with open("employees.csv","r") as fobj:
+    reader = csv.reader(fobj) # converting file object to csv object
+    for line in reader:
+        print(line)
+
+#method5
+import pandas as pd
+df = pd.read_csv("employees.csv")
+print(df)
+
+
+
+
+
+
+
+
+import csv
+try:
+    with open("employees1111.csv","r") as fobj:
+        reader = csv.reader(fobj) # converting file object to csv object
+        for line in reader:
+            print(line)
+except Exception as e:
+    print("system error:",e)
+    
+    
+    
+
+
+
+import csv
+try:
+    with open("employees1111.csv","r") as fobj:
+        reader = csv.reader(fobj) # converting file object to csv object
+        for line in reader:
+            print(line)
+except TypeError as err:
+    print("invalid operation")
+except ValueError as err:
+    print("invlaid input")
+except (IndexError,KeyError) as err:
+    print("index or key is not found")     
+except Exception as e:
+    print("system error:",e)
+    
+    
+    
+    
+    
+    
+    
+    
+################################### frequently used builtin libraries #############################
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+pathlib	   : Object-oriented file path operations
+time	     : Delays, timestamps, performance checks
+logging	   : Logging for scripts/apps (replace print for real apps)
+argparse	 : Command-line interface (CLI) argument parsing
+configparser : 	Read/write .ini config files
+json	     :Serialize/deserialize JSON (common in APIs)
+uuid	     : Generate unique IDs (useful in files, databases)
+statistics	:Basic stats: mean, median, stdev
+random	    :Random number generation, sampling
+collections	:Specialized containers (defaultdict, Counter, namedtuple)
+traceback	   :Print/format exception tracebacks
+warnings	   :Raise and handle warnings
+
+
+
+
+
+
+
+
+
+
+urls = [
+    "https://www.google.com",
+    "https://www.bing.com",
+]
+
+
+def scrape_title(url):
+    # Download page HTML.
+    response = requests.get(url, timeout=10)
+    urllist =[]
+    # Parse HTML using BeautifulSoup.
+    soup = BeautifulSoup(response.text, "html.parser")
+    for link in soup.find_all('a'):
+        url = link.get('href')
+        urllist.append(url)
+    # Extract title if available.
+    #title = soup.title.string.strip() if soup.title else "No title found"
+
+    return urllist
+
+
+with ThreadPoolExecutor(max_workers=2) as executor:
+    results = executor.map(scrape_title, urls)
+
+for url in results:
+    print(f"{len(url)}")
+    
+    
+    
+    
+    
