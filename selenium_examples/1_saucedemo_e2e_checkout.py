@@ -19,11 +19,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-options = Options()
-options.add_argument("--start-maximized")
+#options = Options()
+#options.add_argument("--start-maximized")
 
-driver = webdriver.Chrome(options=options)
-wait = WebDriverWait(driver, 15)
+#driver = webdriver.Chrome(options=options)
+
 
 try:
     options = Options()
@@ -48,7 +48,7 @@ try:
     
     driver = webdriver.Chrome(options=options)
 
-
+    wait = WebDriverWait(driver, 15)
     
     driver.get("https://www.saucedemo.com/")
 
