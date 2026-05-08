@@ -38,7 +38,7 @@ time.sleep(5)
 # Amazon page structure may change sometimes, so this XPath may need adjustment later
 products = driver.find_elements(
     By.XPATH,
-    "//span[@class='a-size-medium a-color-base a-text-normal']"
+    "//h2//span"
 )
 
 print("Product Names:")
